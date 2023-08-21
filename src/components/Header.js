@@ -7,9 +7,10 @@ const Header = () => {
     setShow(!show);
   }
   return (
+
     <header className='bg-black text-white flex justify-between px-5 py-1'>
       <div>
-        <h1 className='text-2xl'>Sample Logo</h1>
+        <NavLink to='/'><h1 className='text-2xl'>Sample Logo</h1></NavLink>
         {show && <nav className='space-x-5 text-lg'>
           <NavLink to='/about'>About</NavLink>
           <NavLink to='/contact' >Contact</NavLink>
@@ -29,6 +30,8 @@ const Header = () => {
 
       </div>
     </header>
+
+
   )
 }
 
