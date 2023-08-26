@@ -21,6 +21,7 @@ const Header = () => {
         <nav className='space-x-5 text-lg sm:hidden'>
           <NavLink to='/about'>About</NavLink>
           <NavLink to='/contact' >Contact</NavLink>
+          <NavLink to='/add-form'>Add Form</NavLink>
         </nav>
         {show ? <button onClick={() => toggle()}><i class="fa-solid fa-xmark"></i></button> : <button className='hidden sm:flex items-end' onClick={() => toggle()}><i class="fa-solid fa-bars fa-md"></i></button>
         }
