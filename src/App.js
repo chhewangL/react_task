@@ -1,11 +1,14 @@
 import React from 'react'
 import { Route, Routes } from 'react-router'
 import HomePage from './pages/HomePage'
-import About from './pages/About'
-import Contact from './pages/Contact'
+
 import RootLayout from './components/RootLayout'
-import AddForm from './components/AddForm'
-import UpdateForm from './components/UpdateForm'
+import MovieByCategory from './components/MovieByCategory'
+import Detail from './pages/Detail'
+import VideoPage from './components/VideoPage'
+import SearchPage from './pages/SearchPage'
+import MoviePage from './pages/MoviePage'
+
 
 const App = () => {
   return (
@@ -13,10 +16,13 @@ const App = () => {
       <Routes>
         <Route path='/' element={<RootLayout />}>
           <Route index element={<HomePage />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/contact' element={<Contact />} />
-          <Route path='/add-form' element={<AddForm />} />
-          <Route path='/update-form/:id' element={<UpdateForm />} />
+          <Route path='/movie/:category' element={<MovieByCategory />} />
+          <Route path='/movieDetails/:movie_id' element={<Detail />} />
+          <Route path='/movieTrailer/:movie_id' element={<VideoPage />} />
+          <Route path='/movieSearch/:query' element={<SearchPage />} />
+          <Route path='/movie/:category/:page' element={<MoviePage />} />
+
+
         </Route>
 
 

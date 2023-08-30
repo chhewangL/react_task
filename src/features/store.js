@@ -1,11 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userReducer from "./userSlice";
+import { movieApi } from "./MovieAPI";
+
 
 
 export const store = configureStore({
   reducer: {
-    'userInfo': userReducer
-  }
-
+    [movieApi.reducerPath]: movieApi.reducer
+  },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(movieApi.middleware),
 
 })
